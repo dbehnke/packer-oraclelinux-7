@@ -53,7 +53,6 @@ $ vagrant ssh
 
 Sample:
 
-```
     $ mkdir ol7-test
 
     $ cd ol7-test
