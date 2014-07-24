@@ -1,8 +1,8 @@
 # Oracle Linux 7 - Build with Packer, Use with Vagrant
 
-This will build an Oracle Linux 7 Installation for VirtualBox and Vmware (Untested) using packer and vagrant.
+Builds an Oracle Linux 7 Installation for VirtualBox and Vmware (Untested) using packer and vagrant.
 
-This template is based off of https://github.com/opscode/bento/blob/master/packer/centos-7.0-x86_64.json 
+Template is based off of https://github.com/opscode/bento/blob/master/packer/centos-7.0-x86_64.json 
 
 ## Prerequisites
 
