@@ -1,4 +1,4 @@
-# Oracle Linux 7 - Build with Packer, Use with Vagrant
+# packer-oraclelinux-7
 
 Builds an Oracle Linux 7 Installation for VirtualBox and Vmware (Untested) using packer and vagrant.
 
