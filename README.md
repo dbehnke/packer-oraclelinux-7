@@ -35,10 +35,58 @@ $ cd packer-oraclelinux-7
 $ packer build -only=virtualbox-iso ol-7.0-x86_64.json
 ```
 
-5.  Import into vagrant
+5.  Add to vagrant
 
-    TODO
+```
+$ vagrant box add ol7 oraclelinux-7.0_chef-provisionerless.box
+```
 
 6.  Test with vagrant
 
-    TODO
+```
+$ mkdir ol7-test
+$ cd ol7-test
+$ vagrant init ol7
+$ vagrant up
+$ vagrant ssh
+```
+
+Sample:
+
+```
+    $ mkdir ol7-test
+
+    $ cd ol7-test
+
+    $ vagrant init ol7
+    A `Vagrantfile` has been placed in this directory. You are now
+    ready to `vagrant up` your first virtual environment! Please read
+    the comments in the Vagrantfile as well as documentation on
+    `vagrantup.com` for more information on using Vagrant.
+
+    $ vagrant up
+    Bringing machine 'default' up with 'virtualbox' provider...
+    ==> default: Importing base box 'ol7'...
+    ==> default: Matching MAC address for NAT networking...
+    ==> default: Setting the name of the VM: ol7-test_default_1406232534352_11563
+    ==> default: Clearing any previously set network interfaces...
+    ==> default: Preparing network interfaces based on configuration...
+        default: Adapter 1: nat
+    ==> default: Forwarding ports...
+        default: 22 => 2222 (adapter 1)
+    ==> default: Booting VM...
+    ==> default: Waiting for machine to boot. This may take a few minutes...
+        default: SSH address: 127.0.0.1:2222
+        default: SSH username: vagrant
+        default: SSH auth method: private key
+        default: Warning: Connection timeout. Retrying...
+    ==> default: Machine booted and ready!
+    ==> default: Checking for guest additions in VM...
+    ==> default: Mounting shared folders...
+        default: /vagrant => /Users/dbehnke/Development/packer-ol7/ol7-test
+
+    $ vagrant ssh
+    Last login: Thu Jul 24 19:48:41 2014 from 10.0.2.2
+
+    [vagrant@localhost ~]$ cat /etc/redhat-release
+    Red Hat Enterprise Linux Server release 7.0 (Maipo)
