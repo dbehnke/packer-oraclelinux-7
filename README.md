@@ -6,42 +6,42 @@ Template is based off of https://github.com/opscode/bento/blob/master/packer/cen
 
 ## Prerequisites
 
-1.  Packer - http://packer.io
+1. Packer - http://packer.io
 
-2.  Vagrant - http://vagrantup.com
+2. Vagrant - http://vagrantup.com
 
-3.  VirtualBox - http://virtualbox.org  (VMWare may work but was not tested)
+3. VirtualBox - http://virtualbox.org  (VMWare may work but was not tested)
 
-4.  Oracle Linux 7 ISO - https://edelivery.oracle.com/linux
+4. Oracle Linux 7 ISO - https://edelivery.oracle.com/linux
 
-*Download the OracleLinux-R7-U0-Server-x86_64-dvd.iso image.*
+5. Download the OracleLinux-R7-U0-Server-x86_64-dvd.iso image.*
 
 ## Build Instructions
 
-1.  Clone the repository
+1. Clone the repository
 
 ```
 $ git clone https://github.com/dbehnke/packer-oraclelinux-7.git
 $ cd packer-oraclelinux-7
 ```
 
-2.  Install the prerequisites, make sure the packer and vagrant commands are in your PATH and callable from Terminal/Command Prompt
+2. Install the prerequisites, make sure the packer and vagrant commands are in your PATH and callable from Terminal/Command Prompt
 
-3.  Place OracleLinux-R7-U0-Server-x86_64-dvd.iso in the iso folder
+3. Place OracleLinux-R7-U0-Server-x86_64-dvd.iso in the iso folder
 
-4.  Build the image
+4. Build the image
 
 ```
 $ packer build -only=virtualbox-iso ol-7.0-x86_64.json
 ```
 
-5.  Add to vagrant
+5. Add to vagrant
 
 ```
 $ vagrant box add ol7 oraclelinux-7.0_chef-provisionerless.box
 ```
 
-6.  Test with vagrant
+6. Test with vagrant
 
 ```
 $ mkdir ol7-test
