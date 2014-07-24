@@ -21,6 +21,7 @@ Download the OracleLinux-R7-U0-Server-x86_64-dvd.iso image.
 1.  Clone the repository
 
     $ git clone https://github.com/dbehnke/packer-oraclelinux-7.git 
+    
     $ cd packer-oraclelinux-7
 
 2.  Install the prerequisites, make sure the packer and vagrant commands are in your PATH and callable from Terminal/Command Prompt
